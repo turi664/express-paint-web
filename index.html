@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Express auto paint shop - Showroom quality paint in 48 hours. Lifetime warranty, free quotes.">
+    <title>Express Auto Paint | 48-Hour Paint Jobs | Lifetime Warranty</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">
+                    <i class="fas fa-spray-can"></i>
+                    <span>EXPRESS<span class="highlight">AUTOPAINT</span></span>
+                </a>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#process" class="nav-link">Our Process</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="tel:+1234567890" class="phone-link">
+                    <i class="fas fa-phone"></i>
+                    <span>(123) 456-7890</span>
+                </a>
+                <button class="btn btn-primary pulse" onclick="scrollToQuote()">
+                    Get a 60-Second Quote
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-video-container">
+            <!-- Replace with actual video or use background image -->
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=1920');"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <h1 class="hero-title fade-in">
+                Showroom-Quality Paint.<br>
+                <span class="highlight">Back on the Road in 48 Hours.</span>
+            </h1>
+            
+            <p class="hero-subtitle fade-in-delay">
+                Skip the 3-week wait. Our express paint booths and dedicated crew deliver a flawless, 
+                factory-grade finish in just two days. Drop it off Monday, drive it home Wednesday.
+            </p>
+            
+            <div class="hero-cta fade-in-delay-2">
+                <button class="btn btn-primary btn-large" onclick="scrollToQuote()">
+                    Calculate My Quote
+                </button>
+                <button class="btn btn-outline btn-large" onclick="scrollToProcess()">
+                    See the 48-Hour Process
+                </button>
+            </div>
+            
+            <div class="trust-bar fade-in-delay-3">
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Lifetime Paint Warranty</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-palette"></i>
+                    <span>10,000+ Exact Color Matches</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-star"></i>
+                    <span>4.9/5 on Google</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS SECTION -->
+    <section class="pain-points" id="painPoints">
+        <div class="container">
+            <h2 class="section-title">Need a Quick Facelift?</h2>
+            <p class="section-subtitle">We solve your car paint problems in record time</p>
+            
+            <div class="pain-points-grid">
+                <div class="pain-point-card scroll-reveal">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Selling Your Car?</h3>
+                    <p>Boost your resale value instantly. A fresh paint job pays for itself at the dealership.</p>
+                    <div class="pain-point-stats">
+                        <span class="stat-number">+25%</span>
+                        <span class="stat-label">Average Value Increase</span>
+                    </div>
+                </div>
+                
+                <div class="pain-point-card scroll-reveal">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Faded Clear Coat?</h3>
+                    <p>Don't let sun damage ruin your car. We restore faded panels to a mirror finish.</p>
+                    <div class="pain-point-stats">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">UV Protection</span>
+                    </div>
+                </div>
+                
+                <div class="pain-point-card scroll-reveal">
+                    <div class="pain-point-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>No Rental Car?</h3>
+                    <p>We know you need your car. Our express service means no loaners, no inconveniences.</p>
+                    <div class="pain-point-stats">
+                        <span class="stat-number">48hrs</span>
+                        <span class="stat-label">Average Turnaround</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 48-HOUR TIMELINE -->
+    <section class="timeline-section" id="process">
+        <div class="container">
+            <h2 class="section-title">The 48-Hour Timeline</h2>
+            <p class="section-subtitle">From drop-off to drive-home in 5 simple steps</p>
+            
+            <div class="timeline">
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Drop Off</h3>
+                        <p class="time">8:00 AM Day 1</p>
+                        <p>Quick 15-min inspection and color match.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Prep & Prime</h3>
+                        <p class="time">Day 1 Afternoon</p>
+                        <p>Sanding, masking, and precision priming.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Paint & Clear</h3>
+                        <p class="time">Day 2 Morning</p>
+                        <p>Dust-free booth application, basecoat, and 3 layers of premium clear.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Bake & Polish</h3>
+                        <p class="time">Day 2 Afternoon</p>
+                        <p>Infrared curing and final hand-buff for a mirror shine.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3>Pick Up</h3>
+                        <p class="time">4:00 PM Day 2</p>
+                        <p>Walkaround inspection and drive home!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE & AFTER GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Transformations</h2>
+            <p class="section-subtitle">See the difference in seconds</p>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="restoration">Restoration</button>
+                <button class="filter-btn" data-filter="colorchange">Color Change</button>
+                <button class="filter-btn" data-filter="repair">Repair</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Before/After Item 1 -->
+                <div class="gallery-item scroll-reveal" data-category="restoration">
+                    <div class="before-after-slider">
+                        <div class="before-after-image-container">
+                            <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800" alt="After" class="img-after">
+                            <div class="before-overlay" style="background-image: url('https://images.unsplash.com/photo-1489824901288-2111a2a96a68?w=800');">
+                                <div class="before-label">BEFORE</div>
+                            </div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="slider1">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>2015 Honda Civic - Full Restoration</h4>
+                        <p>Faded clear coat to showroom finish</p>
+                    </div>
+                </div>
+                
+                <!-- Before/After Item 2 -->
+                <div class="gallery-item scroll-reveal" data-category="colorchange">
+                    <div class="before-after-slider">
+                        <div class="before-after-image-container">
+                            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800" alt="After" class="img-after">
+                            <div class="before-overlay" style="background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800');">
+                                <div class="before-label">BEFORE</div>
+                            </div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="slider2">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>2018 Ford Mustang - Color Change</h4>
+                        <p>Silver to Matte Black</p>
+                    </div>
+                </div>
+                
+                <!-- Before/After Item 3 -->
+                <div class="gallery-item scroll-reveal" data-category="repair">
+                    <div class="before-after-slider">
+                        <div class="before-after-image-container">
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800" alt="After" class="img-after">
+                            <div class="before-overlay" style="background-image: url('https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=800');">
+                                <div class="before-label">BEFORE</div>
+                            </div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="slider3">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>2020 Toyota Camry - Bumper Repair</h4>
+                        <p>Collision damage to perfect finish</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Paint Packages</h2>
+            <p class="section-subtitle">Transparent pricing, no hidden fees</p>
+            
+            <div class="pricing-grid">
+                <!-- Economy Package -->
+                <div class="pricing-card scroll-reveal">
+                    <div class="pricing-header">
+                        <h3>The Quick Touch-Up</h3>
+                        <p class="pricing-subtitle">Economy</p>
+                        <div class="pricing-price">
+                            <span class="price">$299</span>
+                            <span class="period">starting at</span>
+                        </div>
+                        <div class="pricing-time">
+                            <i class="fas fa-clock"></i>
+                            <span>24 Hours</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Single panel or bumper</li>
+                        <li><i class="fas fa-check"></i> Color match guarantee</li>
+                        <li><i class="fas fa-check"></i> Basic clear coat</li>
+                        <li><i class="fas fa-check"></i> 1-year warranty</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Color sanding</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Premium clear</li>
+                    </ul>
+                    
+                    <button class="btn btn-outline btn-full" onclick="selectPackage('economy')">
+                        Select Package
+                    </button>
+                </div>
+                
+                <!-- Standard Package (POPULAR) -->
+                <div class="pricing-card popular scroll-reveal">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="pricing-header">
+                        <h3>The Driveway Makeover</h3>
+                        <p class="pricing-subtitle">Standard</p>
+                        <div class="pricing-price">
+                            <span class="price">$899</span>
+                            <span class="period">starting at</span>
+                        </div>
+                        <div class="pricing-time">
+                            <i class="fas fa-clock"></i>
+                            <span>48 Hours</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Full car paint job</li>
+                        <li><i class="fas fa-check"></i> Premium color match</li>
+                        <li><i class="fas fa-check"></i> Standard clear coat</li>
+                        <li><i class="fas fa-check"></i> 3-year warranty</li>
+                        <li><i class="fas fa-check"></i> Basic color sanding</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Multi-stage paint</li>
+                    </ul>
+                    
+                    <button class="btn btn-primary btn-full" onclick="selectPackage('standard')">
+                        Select Package
+                    </button>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="pricing-card scroll-reveal">
+                    <div class="pricing-header">
+                        <h3>The Showroom Shine</h3>
+                        <p class="pricing-subtitle">Premium</p>
+                        <div class="pricing-price">
+                            <span class="price">$1,899</span>
+                            <span class="period">starting at</span>
+                        </div>
+                        <div class="pricing-time">
+                            <i class="fas fa-clock"></i>
+                            <span>48-72 Hours</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Full car premium paint</li>
+                        <li><i class="fas fa-check"></i> Perfect color match</li>
+                        <li><i class="fas fa-check"></i> Multi-stage clear coat</li>
+                        <li><i class="fas fa-check"></i> Lifetime warranty</li>
+                        <li><i class="fas fa-check"></i> Color sand & buff</li>
+                        <li><i class="fas fa-check"></i> Ceramic coating option</li>
+                    </ul>
+                    
+                    <button class="btn btn-outline btn-full" onclick="selectPackage('premium')">
+                        Select Package
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTANT QUOTE CALCULATOR -->
+    <section class="calculator-section" id="quote">
+        <div class="container">
+            <div class="calculator-wrapper scroll-reveal">
+                <div class="calculator-header">
+                    <h2>Get Your Instant Quote</h2>
+                    <p>Calculate your paint job cost in 60 seconds</p>
+                </div>
+                
+                <form class="calculator-form" id="quoteForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vehicleSize">Vehicle Size</label>
+                            <select id="vehicleSize" required>
+                                <option value="">Select Size</option>
+                                <option value="compact">Compact Car</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV / Crossover</option>
+                                <option value="truck">Truck / Van</option>
+                                <option value="luxury">Luxury / Exotic</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="serviceType">Service Type</label>
+                            <select id="serviceType" required>
+                                <option value="">Select Service</option>
+                                <option value="single">Single Panel</option>
+                                <option value="bumper">Bumper Only</option>
+                                <option value="partial">Partial (2-3 panels)</option>
+                                <option value="full">Full Car Paint</option>
+                                <option value="colorchange">Full Color Change</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="paintQuality">Paint Quality</label>
+                            <select id="paintQuality" required>
+                                <option value="economy">Economy (Single Stage)</option>
+                                <option value="standard" selected>Standard (Base/Clear)</option>
+                                <option value="premium">Premium (Multi-Stage)</option>
+                                <option value="custom">Custom (Pearl/Metallic)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="condition">Current Condition</label>
+                            <select id="condition" required>
+                                <option value="good">Good (Minor scratches)</option>
+                                <option value="fair">Fair (Faded clear coat)</option>
+                                <option value="poor">Poor (Peeling/Rust)</option>
+                                <option value="collision">Collision Damage</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="additionalNotes">Additional Notes (Optional)</label>
+                            <textarea id="additionalNotes" rows="3" placeholder="Tell us about any specific requirements..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="(123) 456-7890">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-result" id="calculatorResult">
+                        <div class="result-label">Estimated Price Range</div>
+                        <div class="result-price" id="priceRange">$0 - $0</div>
+                        <div class="result-time" id="timeEstimate">Turnaround: --</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        Send My Quote Request
+                    </button>
+                    
+                    <p class="form-disclaimer">
+                        <i class="fas fa-lock"></i>
+                        Your info is secure. We respond within 2 hours during business hours.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES / BELLS & WHISTLES -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-subtitle">The Express AutoPaint difference</p>
+            
+            <div class="features-grid">
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>SMS Tracking</h3>
+                    <p>Text 'PAINT' to get real-time photo updates of your car's progress.</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Live Booth Camera</h3>
+                    <p>Watch your car being painted in real-time through our booth cameras.</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Color Match Guarantee</h3>
+                    <p>Perfect match or we repaint it free. 10,000+ colors in our database.</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Lifetime Warranty</h3>
+                    <p>Premium packages include lifetime warranty against peeling and fading.</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-shuttle-van"></i>
+                    </div>
+                    <h3>Free Shuttle Service</h3>
+                    <p>Need a ride? We'll drop you off and pick you up within 10 miles.</p>
+                </div>
+                
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Insurance Direct Billing</h3>
+                    <p>We handle all the paperwork. Just drop off and we'll do the rest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Got questions? We've got answers.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>How long does a full paint job really take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our express service delivers a full paint job in 48 hours from drop-off to pick-up. This includes complete prep, painting, curing, and final polish. We use infrared curing technology to speed up the process without compromising quality.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Will the paint match my car's original color?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We use computerized color matching technology and have access to over 10,000 factory color codes. Our Color Match Guarantee means if we don't match it perfectly, we'll repaint it for free.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Do you offer a warranty on your paint work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our Economy package includes a 1-year warranty, Standard includes 3 years, and Premium includes a lifetime warranty against peeling, fading, and defects. All warranties are fully transferable if you sell your vehicle.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Can I get a loaner car while mine is being painted?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>While we don't provide loaner cars, our 48-hour turnaround means you'll rarely need one. We also offer free shuttle service within 10 miles, and can arrange rideshare credits if needed.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>What if I need body work before painting?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We handle all necessary body work in-house! Our technicians will assess any damage during the initial inspection and provide a complete quote. Minor repairs are included in our standard packages.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span>Do you work with insurance companies?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We work directly with all major insurance companies and handle all the paperwork and claims processing. You just drop off your car and we'll take care of the rest.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content scroll-reveal">
+                <h2>Ready to Transform Your Car?</h2>
+                <p>Slots for this week are almost gone. Secure your 48-hour slot now.</p>
+                <div class="final-cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToQuote()">
+                        <i class="fas fa-calendar-check"></i>
+                        Book My Drop-Off Time
+                    </button>
+                    <a href="tel:+1234567890" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone"></i>
+                        Call (123) 456-7890
+                    </a>
+                </div>
+                <p class="cta-guarantee">
+                    <i class="fas fa-shield-alt"></i>
+                    Lifetime Warranty • Free Estimates • 48-Hour Turnaround
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-spray-can"></i>
+                        <span>EXPRESS<span class="highlight">AUTOPAINT</span></span>
+                    </div>
+                    <p>Professional auto paint services with 48-hour turnaround. Quality you can see, speed you can trust.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Full Paint Jobs</a></li>
+                        <li><a href="#">Color Changes</a></li>
+                        <li><a href="#">Touch-Ups</a></li>
+                        <li><a href="#">Clear Coat Restoration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Auto Paint Blvd<br>San Diego, CA 92101</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@expressautopaint.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 8AM - 6PM<br>Sun: Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-resources">
+                    <a href="#" class="resource-download">
+                        <i class="fas fa-download"></i>
+                        <span>Download Prep Checklist</span>
+                    </a>
+                </div>
+                <p>&copy; 2024 Express AutoPaint. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
